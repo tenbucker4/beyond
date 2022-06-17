@@ -1,3 +1,60 @@
-.test {
-    color: red;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+}
+
+#slider-container {
+    display: flex;
+    justify-content: center;
+}
+
+#slider {
+    display: flex;
+    width: calc(100% - 10rem);
+    transform: translateX(0%);
+}
+
+#slider > #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    flex: 0 0 33%;
+    background-color: lightblue;
+}
+
+.handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    cursor: pointer;
+}
+
+.handle img {
+    transition: transform 200ms ease-in-out;
+}
+
+.handle:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.handle:hover img {
+    transform: scale(1.2);
+}
+
+.left-handle {
+}
+. .right-handle {
 }
