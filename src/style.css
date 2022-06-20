@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: sans-serif;
 }
 
 body {
@@ -19,6 +20,52 @@ body {
     background-color: grey;
 }
 
+/* Dropdown menu */
+#dropdown {
+    padding: 2rem;
+    position: relative;
+}
+
+#dropdown button {
+    padding: 0.5rem 0.75rem;
+    width: 6rem;
+    height: 2rem;
+    font-family: inherit;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-button img {
+    width: 1rem;
+    height: auto;
+}
+
+.dropdown-options {
+    position: absolute;
+    left: 2rem;
+    top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.celsius {
+}
+
+.fahrenheit {
+}
+
+.kelvin {
+}
+
+/* Imager Slider */
 #slider-container {
     width: 75%;
     display: flex;
@@ -72,15 +119,18 @@ body {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .right-handle {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
+/* Progress Bar */
 #progress-bar {
     display: flex;
     gap: 0.5rem;
-    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
 }
 
 .progress-blip {
