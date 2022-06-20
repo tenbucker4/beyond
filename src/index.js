@@ -17,10 +17,32 @@ function moveSlider(handle) {
     );
 
     if (handle.classList.contains("left-handle")) {
-        slider.style.setProperty("--slider-index", sliderIndex - 1);
+        if (sliderIndex <= 0) {
+            return;
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex - 1);
+        }
     }
 
     if (handle.classList.contains("right-handle")) {
-        slider.style.setProperty("--slider-index", sliderIndex + 1);
+        if (sliderIndex >= 2) {
+            return;
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex + 1);
+        }
     }
+
+    checkProgress();
+}
+
+function checkProgress() {
+    document.getElementById("0").classList.remove("active");
+    document.getElementById("1").classList.remove("active");
+    document.getElementById("2").classList.remove("active");
+    const slider = document.getElementById("slider");
+    const sliderIndex = parseInt(
+        getComputedStyle(slider).getPropertyValue("--slider-index")
+    );
+
+    document.getElementById(sliderIndex).classList.add("active");
 }

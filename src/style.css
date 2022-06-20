@@ -7,7 +7,7 @@
 }
 
 :root {
-    --handle-width: 5rem;
+    --handle-width: 3rem;
 }
 
 html {
@@ -16,6 +16,7 @@ html {
 
 body {
     width: 100vw;
+    background-color: grey;
 }
 
 #slider-container {
@@ -41,15 +42,15 @@ body {
     border: none;
     flex: 0 0 calc(100% / 3);
     background-color: lightblue;
-    border: 1px solid black;
+    border: none;
 }
 
 .handle {
     display: flex;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     width: var(--handle-width);
-    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 5;
     cursor: pointer;
@@ -68,6 +69,27 @@ body {
 }
 
 .left-handle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .right-handle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#progress-bar {
+    display: flex;
+    gap: 0.5rem;
+    padding: 2rem;
+}
+
+.progress-blip {
+    width: 2rem;
+    height: 0.5rem;
+    background-color: rgb(154, 153, 153);
+    border-radius: 10px;
+}
+
+.progress-blip.active {
+    background-color: white;
 }
