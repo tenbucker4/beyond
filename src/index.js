@@ -5,6 +5,7 @@ document.addEventListener("click", (e) => {
     } else {
         handle = e.target.closest(".handle");
     }
+
     if (handle != null) {
         moveSlider(handle);
     }
@@ -36,9 +37,9 @@ function moveSlider(handle) {
 }
 
 function checkProgress() {
-    document.getElementById("0").classList.remove("active");
-    document.getElementById("1").classList.remove("active");
-    document.getElementById("2").classList.remove("active");
+    document.querySelectorAll(".progress-blip").forEach((blip) => {
+        blip.classList.remove("active");
+    });
     const slider = document.getElementById("slider");
     const sliderIndex = parseInt(
         getComputedStyle(slider).getPropertyValue("--slider-index")
@@ -46,3 +47,9 @@ function checkProgress() {
 
     document.getElementById(sliderIndex).classList.add("active");
 }
+
+document.addEventListener("click", function (e) {
+    if (e.target && e.target.classList.contains("dropdown-button")) {
+        console.log("click");
+    }
+});

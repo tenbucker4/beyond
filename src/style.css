@@ -48,21 +48,17 @@ body {
     height: auto;
 }
 
+.dropdown-button span {
+    pointer-events: none;
+}
+
 .dropdown-options {
     position: absolute;
     left: 2rem;
     top: 4rem;
     display: flex;
     flex-direction: column;
-}
-
-.celsius {
-}
-
-.fahrenheit {
-}
-
-.kelvin {
+    opacity: 0;
 }
 
 /* Imager Slider */
