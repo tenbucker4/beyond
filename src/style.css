@@ -83,8 +83,8 @@ body {
 /* Imager Slider */
 #slider-container {
     margin-top: auto;
-    width: 80%;
-    height: 10%;
+    width: 50%;
+    height: auto;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -111,6 +111,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 #box img {
@@ -120,9 +121,14 @@ body {
 
 #box p {
     position: absolute;
-    top: 50%;
+    bottom: 0.5rem;
     text-align: center;
     color: white;
+    opacity: 0;
+}
+
+#box:hover p {
+    opacity: 1;
 }
 
 .handle {

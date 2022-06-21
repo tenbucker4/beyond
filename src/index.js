@@ -67,3 +67,10 @@ document.addEventListener("click", function (e) {
         document.querySelector(".dropdown-options").classList.toggle("active");
     }
 });
+
+// document.addEventListener("mouseover", function (e) {
+//     if (e.target && e.target.id == "box") {
+//         const highlightText = document.querySelector(".highlight-text");
+//         highlightText.style.opacity = "1";
+//     }
+// });
