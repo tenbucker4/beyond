@@ -58,7 +58,14 @@ body {
     top: 4rem;
     display: flex;
     flex-direction: column;
-    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: visibility 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-options.active {
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* Imager Slider */

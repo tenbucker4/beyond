@@ -50,6 +50,13 @@ function checkProgress() {
 
 document.addEventListener("click", function (e) {
     if (e.target && e.target.classList.contains("dropdown-button")) {
-        console.log("click");
+        document.querySelector(".dropdown-options").classList.toggle("active");
+    }
+});
+
+document.addEventListener("click", function (e) {
+    if (e.target && e.target.classList.contains("temperature")) {
+        document.querySelector(".temp-text").textContent = e.target.textContent;
+        document.querySelector(".dropdown-options").classList.toggle("active");
     }
 });
