@@ -16,8 +16,20 @@ html {
 }
 
 body {
+    min-height: 100vh;
     width: 100vw;
-    background-color: grey;
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url(./images/spacex.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Dropdown menu */
@@ -70,7 +82,9 @@ body {
 
 /* Imager Slider */
 #slider-container {
-    width: 75%;
+    margin-top: auto;
+    width: 80%;
+    height: 10%;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -86,18 +100,33 @@ body {
 }
 
 #slider > #box {
-    border-radius: 10px;
     max-width: calc(100% / 3);
     aspect-ratio: 16 / 9;
     border: none;
     flex: 0 0 calc(100% / 3);
-    background-color: lightblue;
+    background-color: black;
     border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#box img {
+    width: 100%;
+    height: auto;
+}
+
+#box p {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: white;
 }
 
 .handle {
     display: flex;
-    border-radius: 10px;
     align-items: center;
     justify-content: center;
     width: var(--handle-width);
@@ -118,22 +147,11 @@ body {
     transform: scale(1.2);
 }
 
-.left-handle {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.right-handle {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
 /* Progress Bar */
 #progress-bar {
     display: flex;
     gap: 0.5rem;
-    padding-top: 5rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0rem;
 }
 
 .progress-blip {
