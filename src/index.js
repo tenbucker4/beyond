@@ -19,7 +19,7 @@ function moveSlider(handle) {
 
     if (handle.classList.contains("left-handle")) {
         if (sliderIndex <= 0) {
-            return;
+            slider.style.setProperty("--slider-index", 2);
         } else {
             slider.style.setProperty("--slider-index", sliderIndex - 1);
         }
@@ -27,7 +27,7 @@ function moveSlider(handle) {
 
     if (handle.classList.contains("right-handle")) {
         if (sliderIndex >= 2) {
-            return;
+            slider.style.setProperty("--slider-index", 0);
         } else {
             slider.style.setProperty("--slider-index", sliderIndex + 1);
         }
