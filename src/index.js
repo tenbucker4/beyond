@@ -1,3 +1,16 @@
+// Intro animation
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        const title = document.querySelector(".title");
+        title.style.top = "1rem";
+    }, 2000);
+
+    setTimeout(() => {
+        const intro = document.querySelector(".intro");
+        intro.style.opacity = "0";
+    }, 2000);
+});
+
 // Listen for click on image carousel handles, trigger slider move
 document.addEventListener("click", (e) => {
     let handle;
@@ -67,10 +80,3 @@ document.addEventListener("click", function (e) {
         document.querySelector(".dropdown-options").classList.toggle("active");
     }
 });
-
-// document.addEventListener("mouseover", function (e) {
-//     if (e.target && e.target.id == "box") {
-//         const highlightText = document.querySelector(".highlight-text");
-//         highlightText.style.opacity = "1";
-//     }
-// });
