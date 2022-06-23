@@ -1,4 +1,6 @@
 import { moveSlider, checkProgress } from "./imageSlider.js";
+import { test } from "./planetData.js";
+test();
 
 // Intro animation
 window.addEventListener("DOMContentLoaded", () => {

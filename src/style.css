@@ -103,6 +103,10 @@ body {
     transform: translateY(0);
 }
 
+.test {
+    color: white;
+}
+
 /* Imager Slider */
 #slider-container {
     margin-top: auto;
@@ -157,11 +161,11 @@ body {
 }
 
 #neptune {
-    transform: scale(0.65);
+    transform: scale(0.6);
 }
 
 #pluto {
-    transform: scale(0.5);
+    transform: scale(0.4);
 }
 
 #box img {
