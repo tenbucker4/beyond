@@ -55,6 +55,26 @@ body {
     transition: opacity 1000ms ease-in-out;
 }
 
+/* Main container */
+main {
+    display: flex;
+    height: 50%;
+    width: 90%;
+    padding-top: 6rem;
+}
+
+.left-block,
+.right-block {
+    border: 1px solid white;
+    width: 50%;
+}
+
+.left-block {
+}
+
+.right-block {
+}
+
 /* Dropdown menu */
 #dropdown {
     padding: 5rem;

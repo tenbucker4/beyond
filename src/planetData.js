@@ -1,14 +1,15 @@
-function test() {
-    const text = document.querySelector(".test");
-    fetch("https://api.le-systeme-solaire.net/rest/bodies/Earth", {
-        mode: "cors",
-    })
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (response) {
-            text.textContent = response.name;
-        });
-}
+// const test = document.querySelector(".test");
 
-export { test };
+// async function getPlanetData() {
+//     const response = await fetch(
+//         "https://api.le-systeme-solaire.net/rest/bodies/Earth",
+//         {
+//             mode: "cors",
+//         }
+//     );
+//     const planetData = await response.json();
+
+//     test.textContent = planetData.name;
+// }
+
+// export { getPlanetData };
