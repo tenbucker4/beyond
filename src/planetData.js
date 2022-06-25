@@ -1,15 +1,23 @@
-// const test = document.querySelector(".test");
+const title = document.querySelector(".planet-title");
 
-// async function getPlanetData() {
-//     const response = await fetch(
-//         "https://api.le-systeme-solaire.net/rest/bodies/Earth",
-//         {
-//             mode: "cors",
-//         }
-//     );
-//     const planetData = await response.json();
+const planetImages = document.querySelectorAll("#box > img");
+planetImages.forEach((planet) => {
+    planet.addEventListener("click", function (e) {
+        let planetName = e.target.id;
+        getPlanetData(planetName);
+    });
+});
 
-//     test.textContent = planetData.name;
-// }
+async function getPlanetData(planetName) {
+    const response = await fetch(
+        `https://api.le-systeme-solaire.net/rest/bodies/${planetName}`,
+        {
+            mode: "cors",
+        }
+    );
+    const planetData = await response.json();
 
-// export { getPlanetData };
+    console.log(planetData);
+}
+
+export { getPlanetData };
