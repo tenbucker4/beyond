@@ -20,8 +20,8 @@ body {
     width: 100vw;
     background-image: linear-gradient(
             to right,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
         ),
         url(./images/spacex.jpg);
     background-size: cover;
@@ -246,10 +246,10 @@ footer {
 }
 
 .progress-blip {
-    width: 2rem;
+    width: 0.5rem;
     height: 0.5rem;
     background-color: rgb(154, 153, 153);
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .progress-blip.active {

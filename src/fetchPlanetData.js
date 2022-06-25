@@ -1,4 +1,4 @@
-const title = document.querySelector(".planet-title");
+import { populateData } from "./populateDom.js";
 
 const planetImages = document.querySelectorAll("#box > img");
 planetImages.forEach((planet) => {
@@ -15,9 +15,8 @@ async function getPlanetData(planetName) {
             mode: "cors",
         }
     );
-    const planetData = await response.json();
-
-    console.log(planetData);
+    let planetData = await response.json();
+    populateData(planetData);
 }
 
 export { getPlanetData };
