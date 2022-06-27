@@ -112,8 +112,7 @@ main {
 
 .dropdown-options {
     position: absolute;
-    left: 2rem;
-    top: 4rem;
+    top: 2rem;
     display: flex;
     flex-direction: column;
     visibility: hidden;
@@ -159,7 +158,6 @@ footer {
 #slider > #box {
     max-width: calc(100% / 3);
     aspect-ratio: 16 / 9;
-    border: none;
     flex: 0 0 calc(100% / 3);
     background-color: transparent;
     border: none;
@@ -169,6 +167,10 @@ footer {
     align-items: center;
     position: relative;
     cursor: pointer;
+}
+
+#box .active {
+    border: 1px solid whitesmoke;
 }
 
 #mercury {
