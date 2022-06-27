@@ -32,18 +32,3 @@ document.addEventListener("click", (e) => {
         moveSlider(handle);
     }
 });
-
-// Show/hide dropdown menu for temperature units
-document.addEventListener("click", function (e) {
-    if (e.target && e.target.classList.contains("dropdown-button")) {
-        document.querySelector(".dropdown-options").classList.toggle("active");
-    }
-});
-
-// Hide dropdown options when a selection is made and display the selected temperature units
-document.addEventListener("click", function (e) {
-    if (e.target && e.target.classList.contains("temperature")) {
-        document.querySelector(".temp-text").textContent = e.target.textContent;
-        document.querySelector(".dropdown-options").classList.toggle("active");
-    }
-});
