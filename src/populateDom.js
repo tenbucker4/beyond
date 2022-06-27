@@ -12,12 +12,15 @@ function populateData(data) {
     const forwardSlash = "/";
     const superscript = document.createElement("SUP");
     const kg = document.createElement("span");
+    const squared = document.createElement("SUP");
 
     title.textContent = data.englishName;
     avgTemp.textContent = `${data.avgTemp} K`;
     surfaceGravity.textContent = `${Math.round(
         (data.gravity / 10) * 10
     )} m${forwardSlash}s`;
+    squared.textContent = "2";
+    surfaceGravity.appendChild(squared);
     radius.textContent = `${Math.round(data.meanRadius)} km`;
     mass.textContent = `${data.mass.massValue.toPrecision(2)} x 10`;
     superscript.textContent = data.mass.massExponent;
