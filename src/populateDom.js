@@ -9,19 +9,28 @@ const moons = document.getElementById("moonsValue");
 const escape = document.getElementById("escapeValue");
 
 function populateData(data) {
-    console.log(data);
+    const forwardSlash = "/";
+    const superscript = document.createElement("SUP");
+    const kg = document.createElement("span");
 
     title.textContent = data.englishName;
-    avgTemp.textContent = data.avgTemp;
-    surfaceGravity.textContent = data.gravity;
-    radius.textContent = data.meanRadius;
-    mass.textContent = `${data.mass.massValue} ^ ${data.mass.massExponent}`;
+    avgTemp.textContent = `${data.avgTemp} K`;
+    surfaceGravity.textContent = `${Math.round(
+        (data.gravity / 10) * 10
+    )} m${forwardSlash}s`;
+    radius.textContent = `${Math.round(data.meanRadius)} km`;
+    mass.textContent = `${data.mass.massValue.toPrecision(2)} x 10`;
+    superscript.textContent = data.mass.massExponent;
+    kg.textContent = "kg";
+    mass.appendChild(superscript);
+    mass.appendChild(kg);
+
     if (data.moons == null) {
         moons.textContent = "0";
     } else {
         moons.textContent = data.moons.length;
     }
-    escape.textContent = data.escape;
+    escape.textContent = `${Math.round(data.escape / 1000)} km${forwardSlash}s`;
 }
 
 export { populateData };

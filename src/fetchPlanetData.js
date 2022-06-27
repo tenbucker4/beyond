@@ -2,7 +2,6 @@ import { populateData } from "./populateDom.js";
 
 const planetImages = document.querySelectorAll("#box > img");
 const imageBoxes = document.querySelectorAll("#box");
-console.log(imageBoxes);
 planetImages.forEach((planet) => {
     planet.addEventListener("click", function (e) {
         let planetName = e.target.id;

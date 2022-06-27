@@ -12,7 +12,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -214,6 +214,7 @@ footer {
     color: whitesmoke;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
+    font-size: 0.8rem;
 }
 
 #box:hover p {
