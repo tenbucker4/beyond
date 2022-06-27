@@ -20,8 +20,8 @@ body {
     width: 100vw;
     background-image: linear-gradient(
             to right,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
         ),
         url(./images/spacex.jpg);
     background-size: cover;
@@ -204,6 +204,10 @@ footer {
 #box img {
     width: 100%;
     height: auto;
+}
+
+#slider :nth-child(3) {
+    border: 1px solid whitesmoke;
 }
 
 #box p {

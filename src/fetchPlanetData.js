@@ -28,4 +28,4 @@ function highlightPlanet(target) {
     target.style.border = "1px solid whitesmoke";
 }
 
-export { getPlanetData };
+export { getPlanetData, highlightPlanet };

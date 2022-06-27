@@ -15,7 +15,7 @@ function populateData(data) {
     const squared = document.createElement("SUP");
 
     title.textContent = data.englishName;
-    avgTemp.textContent = `${data.avgTemp} K`;
+    avgTemp.textContent = `${data.avgTemp - 273} \u00B0C`;
     surfaceGravity.textContent = `${Math.round(
         (data.gravity / 10) * 10
     )} m${forwardSlash}s`;
@@ -23,7 +23,7 @@ function populateData(data) {
     surfaceGravity.appendChild(squared);
     radius.textContent = `${Math.round(data.meanRadius)} km`;
     mass.textContent = `${data.mass.massValue.toPrecision(2)} x 10`;
-    superscript.textContent = data.mass.massExponent;
+    superscript.textContent = `${data.mass.massExponent} `;
     kg.textContent = "kg";
     mass.appendChild(superscript);
     mass.appendChild(kg);

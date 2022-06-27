@@ -1,5 +1,5 @@
 import { moveSlider, checkProgress } from "./imageSlider.js";
-import { getPlanetData } from "./fetchPlanetData.js";
+import { getPlanetData, highlightPlanet } from "./fetchPlanetData.js";
 
 // Intro animation
 window.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +12,11 @@ window.addEventListener("DOMContentLoaded", () => {
         const intro = document.querySelector(".intro");
         intro.style.opacity = "0";
     }, 2000);
+
+    const earth = document.querySelector("#slider :nth-child(3)");
+    earth.style.border = "1px solid whitesmoke";
+
+    getPlanetData("earth");
 });
 
 // Listen for click on image carousel handles, trigger slider move
