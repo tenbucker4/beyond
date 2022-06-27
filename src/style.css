@@ -74,7 +74,9 @@ main {
 .left-block {
 }
 
-.right-block {
+.right-block .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* Dropdown menu */
