@@ -97,7 +97,8 @@ main {
 }
 
 .data-grid div {
-    height: 1.5rem;
+    height: 2rem;
+    display: flex;
 }
 
 div[id*="Value"] {
@@ -106,10 +107,9 @@ div[id*="Value"] {
 
 /* Dropdown menu */
 #dropdown {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
+    position: relative;
     justify-self: flex-end;
+    padding-bottom: 1rem;
 }
 
 #dropdown button {
@@ -289,4 +289,21 @@ footer {
 
 .progress-blip.active {
     background-color: whitesmoke;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    #slider-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .data-grid {
+        font-size: 0.8rem;
+    }
+
+    #slider-container {
+        width: 75%;
+    }
 }
