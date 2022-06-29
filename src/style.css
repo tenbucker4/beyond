@@ -38,7 +38,7 @@ body {
     padding: 1rem 0rem;
     z-index: 11;
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 2rem;
     left: calc(50% - 2.8rem);
     transition: top 1000ms ease-in-out;
