@@ -4,6 +4,7 @@ const planetImages = document.querySelectorAll("#box > img");
 const imageBoxes = document.querySelectorAll("#box");
 planetImages.forEach((planet) => {
     planet.addEventListener("click", function (e) {
+        window.scrollTo(0, 0);
         let planetName = e.target.id;
         getPlanetData(planetName);
         highlightPlanet(e.target.parentElement);
