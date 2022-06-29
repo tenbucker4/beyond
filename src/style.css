@@ -162,6 +162,24 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.info-block {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#info-icon {
+    width: 1.5rem;
+    height: auto;
+    filter: brightness(0.7);
+    cursor: pointer;
+}
+
+#info-icon:hover {
+    filter: brightness(1.5);
 }
 
 /* Imager Slider */
@@ -289,6 +307,25 @@ footer {
 
 .progress-blip.active {
     background-color: whitesmoke;
+}
+
+/* Information */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    gap: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.info p {
+    font-size: 0.7rem;
+}
+
+a {
+    color: whitesmoke;
 }
 
 /* Responsiveness */
