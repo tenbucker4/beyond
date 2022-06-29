@@ -67,6 +67,9 @@ function populateData(data) {
     document.querySelector(".temp-text").textContent = "Celsius";
     currentTemp = "Celsius";
 
+    const displayImage = document.getElementById("displayImage");
+    displayImage.src = `../src/images/${data.englishName}.png`;
+
     const forwardSlash = "/";
     const superscript = document.createElement("SUP");
     const kg = document.createElement("span");

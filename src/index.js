@@ -1,6 +1,10 @@
 import { moveSlider, checkProgress } from "./imageSlider.js";
 import { getPlanetData, highlightPlanet } from "./fetchPlanetData.js";
 
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
 // Intro animation
 window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {

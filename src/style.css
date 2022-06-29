@@ -28,6 +28,9 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
@@ -45,7 +48,7 @@ body {
     background-color: black;
     z-index: 10;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     opacity: 1;
     pointer-events: none;
@@ -56,32 +59,57 @@ body {
 main {
     display: flex;
     gap: 0.25rem;
-    height: 75vh;
     width: 100%;
     padding: 6rem 2rem 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
 }
 
-.left-block,
-.right-block {
+.block {
     color: whitesmoke;
     background-color: rgba(30, 30, 30, 0.4);
     border-radius: 10px;
     backdrop-filter: blur(2px);
     border: none;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
 }
 
-.left-block {
+.planet-title {
+    padding-bottom: 0.5rem;
 }
 
-.right-block .data-grid {
+#displayImage {
+    width: auto;
+    height: 15rem;
+    padding: 1rem 0;
+}
+
+.block .data-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+.data-grid div {
+    height: 1.5rem;
+}
+
+div[id*="Value"] {
+    justify-self: end;
+}
+
 /* Dropdown menu */
 #dropdown {
-    position: relative;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    justify-self: flex-end;
 }
 
 #dropdown button {
@@ -131,17 +159,15 @@ main {
 
 /* FOOTER CONTENT */
 footer {
-    height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    bottom: 0;
 }
+
 /* Imager Slider */
 #slider-container {
-    width: 50%;
-    height: auto;
+    width: 35%;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -173,31 +199,31 @@ footer {
     border: 1px solid whitesmoke;
 }
 
-#mercury {
+#box #mercury {
     transform: scale(0.65);
 }
 
-#earth {
+#box #earth {
     transform: scale(0.6);
 }
 
-#mars {
+#box #mars {
     transform: scale(0.52);
 }
 
-#jupiter {
+#box #jupiter {
     transform: scale(0.65);
 }
 
-#uranus {
+#box #uranus {
     transform: scale(0.9);
 }
 
-#neptune {
+#box #neptune {
     transform: scale(0.6);
 }
 
-#pluto {
+#box #pluto {
     transform: scale(0.4);
 }
 
