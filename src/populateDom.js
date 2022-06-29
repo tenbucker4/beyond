@@ -27,6 +27,7 @@ document.addEventListener("click", function (e) {
     }
 });
 
+// Toggle displayed temp units between Celsius, Fahrenheit or Kelvin
 function changeTemp(current, selected) {
     if (current == "Celsius" && selected == "Fahrenheit") {
         avgTemp.textContent = `${Math.round(
@@ -63,6 +64,7 @@ function changeTemp(current, selected) {
     }
 }
 
+// Display content for selected planet
 function populateData(data) {
     document.querySelector(".temp-text").textContent = "Celsius";
     currentTemp = "Celsius";

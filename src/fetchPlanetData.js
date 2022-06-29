@@ -1,5 +1,6 @@
 import { populateData } from "./populateDom.js";
 
+// Listen for click on planet images
 const planetImages = document.querySelectorAll("#box > img");
 const imageBoxes = document.querySelectorAll("#box");
 planetImages.forEach((planet) => {
@@ -11,6 +12,7 @@ planetImages.forEach((planet) => {
     });
 });
 
+// Fetch planet data from Solar System OpenData API
 async function getPlanetData(planetName) {
     const response = await fetch(
         `https://api.le-systeme-solaire.net/rest/bodies/${planetName}`,
@@ -22,6 +24,7 @@ async function getPlanetData(planetName) {
     populateData(planetData);
 }
 
+// Highlight current planet
 function highlightPlanet(target) {
     imageBoxes.forEach((image) => {
         image.style.border = "none";
