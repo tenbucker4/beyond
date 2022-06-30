@@ -89,6 +89,7 @@ main {
     width: auto;
     height: 18rem;
     padding: 1rem 0;
+    overflow: hidden;
 }
 
 .block .data-grid {
