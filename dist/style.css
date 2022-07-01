@@ -1,0 +1,347 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --handle-width: 3rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url(./images/spacex.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: whitesmoke;
+    padding: 1rem 0rem;
+    z-index: 11;
+    position: absolute;
+    top: 40%;
+    width: 2rem;
+    left: calc(50% - 2.9rem);
+    transition: top 1000ms ease-in-out;
+}
+
+.intro {
+    background-color: black;
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 1000ms ease-in-out;
+}
+
+/* Main container */
+main {
+    display: flex;
+    gap: 0.25rem;
+    width: 100%;
+    padding: 6rem 2rem 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.block {
+    color: whitesmoke;
+    background-color: rgba(30, 30, 30, 0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    border: none;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.planet-title {
+    padding-bottom: 0.5rem;
+}
+
+#displayImage {
+    width: auto;
+    height: 18rem;
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.block .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.data-grid div {
+    height: 2rem;
+    display: flex;
+}
+
+div[id*="Value"] {
+    justify-self: end;
+}
+
+/* Dropdown menu */
+#dropdown {
+    position: relative;
+    justify-self: flex-end;
+    padding-bottom: 1rem;
+}
+
+#dropdown button {
+    padding: 0.5rem 0.75rem;
+    width: 6rem;
+    height: 2rem;
+    font-family: inherit;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-button img {
+    width: 1rem;
+    height: auto;
+}
+
+.dropdown-button span {
+    pointer-events: none;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: visibility 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-options.active {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.test {
+    color: whitesmoke;
+}
+
+/* FOOTER CONTENT */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.info-block {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#info-icon {
+    width: 1.5rem;
+    height: auto;
+    filter: brightness(0.7);
+    cursor: pointer;
+}
+
+#info-icon:hover {
+    filter: brightness(1.5);
+}
+
+/* Imager Slider */
+#slider-container {
+    width: 35%;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#slider {
+    --slider-index: 0;
+    display: flex;
+    flex-grow: 1;
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+}
+
+#slider > #box {
+    max-width: calc(100% / 3);
+    aspect-ratio: 16 / 9;
+    flex: 0 0 calc(100% / 3);
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+#box .active {
+    border: 1px solid whitesmoke;
+}
+
+#box #mercury {
+    transform: scale(0.65);
+}
+
+#box #earth {
+    transform: scale(0.6);
+}
+
+#box #mars {
+    transform: scale(0.52);
+}
+
+#box #jupiter {
+    transform: scale(0.65);
+}
+
+#box #uranus {
+    transform: scale(0.9);
+}
+
+#box #neptune {
+    transform: scale(0.6);
+}
+
+#box #pluto {
+    transform: scale(0.4);
+}
+
+#box img {
+    width: 100%;
+    height: auto;
+}
+
+#slider :nth-child(3) {
+    border: 1px solid whitesmoke;
+}
+
+#box p {
+    position: absolute;
+    bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: whitesmoke;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    font-size: 0.8rem;
+}
+
+#box:hover p {
+    opacity: 1;
+}
+
+.handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--handle-width);
+    background-color: transparent;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.handle img {
+    transition: transform 200ms ease-in-out;
+}
+
+.handle:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.handle:hover img {
+    transform: scale(1.2);
+}
+
+/* Progress Bar */
+#progress-bar {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 0rem;
+}
+
+.progress-blip {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgb(154, 153, 153);
+    border-radius: 50%;
+}
+
+.progress-blip.active {
+    background-color: whitesmoke;
+}
+
+/* Information */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    gap: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.info p {
+    font-size: 0.7rem;
+}
+
+a {
+    color: whitesmoke;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    #slider-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .data-grid {
+        font-size: 0.8rem;
+    }
+
+    #slider-container {
+        width: 75%;
+    }
+}
