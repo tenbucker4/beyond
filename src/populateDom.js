@@ -64,6 +64,8 @@ function changeTemp(current, selected) {
     }
 }
 
+console.log("hi");
+
 // Display content for selected planet
 function populateData(data) {
     document.querySelector(".temp-text").textContent = "Celsius";
