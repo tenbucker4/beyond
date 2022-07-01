@@ -70,7 +70,7 @@ function populateData(data) {
     currentTemp = "Celsius";
 
     const displayImage = document.getElementById("displayImage");
-    displayImage.src = `../src/images/${data.englishName}.png`;
+    displayImage.src = `images/${data.englishName}.png`;
 
     const forwardSlash = "/";
     const superscript = document.createElement("SUP");
